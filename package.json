@@ -1,0 +1,29 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp Backend CHallenge: URL Shortener",
+  "main": "program.js",
+  "scripts": {
+    "start": "node program.js",
+    "test": "node program.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VukMNE/UrlShortener.git"
+  },
+  "keywords": [
+    "URL",
+    "Shortener"
+  ],
+  "author": "vukmne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VukMNE/UrlShortener/issues"
+  },
+  "homepage": "https://github.com/VukMNE/UrlShortener#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.1"
+  }
+}
