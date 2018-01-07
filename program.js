@@ -57,8 +57,8 @@ app.get( "/:surl", function(request, response){
 				else{
 					response.redirect(res[0].originalUrl.toString());
 				}
-				server.close();
 			  });
+			  server.close();
 		});
 		
 });
