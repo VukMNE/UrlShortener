@@ -1,0 +1,67 @@
+<html>
+
+	<head>
+		<title>URL Shortener</title>
+		<link rel="stylesheet" href="style.css"></link>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></link>
+	</head>
+	
+	<body>
+		<div class="container-fluid">
+			<div class="text-center">
+				<h2>URL Shortener</h2>
+			</div>
+			<div class="form-container text-center">
+				<form>
+					<input id="urlInput" class="searchbar" type="text" placeholder="Example: http://www.example.com" onclick="setInputMask();"/>
+					<input class="btn-search" type="button" value="Insert" onclick="redirect();"/>
+				</form>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<p>
+					This microservice (called micro, because of its simplicity) servers as a mechanism for shortening and saving shortened versions of url.
+				</p>
+				<p>
+					Insert of urls is possible using the form above, or, directly from the address bar. 
+					Once the url is inserted, the microservice will respond with json object telling the user what is the shortened version of the url, which if used, will redirect to original url.
+				</p>
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">Examples of direct address bar use
+				<div>
+					<img src="img/insertUrl.png"></img>
+				</div>
+				<div class="big-arrow animated bounce">
+					<i class="fa fa-arrow-down"></i></a>
+				</div>
+				<div>
+					<img src="img/exampleOfUse.png"></img>
+				</div>
+			</div>
+			
+			<div class="down-under col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			 For GitHub Project click here - > <a href="https://github.com/VukMNE/TimeStampMicroService"><i class="fa fa-github"></i></a>
+			</div><br/>
+			<div class="down-under col-xs-7 col-sm-7 col-md-7 col-lg-7">
+			 For FreeCodeCamp challenge, click here - > <a href="https://www.freecodecamp.org/challenges/url-shortener-microservice"><i class="fa fa-free-code-camp"></i></a>
+			</div>
+		</div>
+		<script>
+		var currHref = window.location.href;		
+		function redirect(){
+			var url = document.getElementById("urlInput").value;
+			window.location.href = currHref + "n/" + url;
+		}
+		
+		function setInputMask(){
+			var url = document.getElementById("urlInput").value;
+			if(url.length == 0 ){
+				document.getElementById("urlInput").value = 'http://';
+			}
+		}
+		
+		
+		</script>
+	</body>
+</html>
