@@ -48,7 +48,7 @@ app.get( "/:surl", function(request, response){
 			let project = { _id: 0};
 			var collection = db.collection("urls");
 			collection.find(query).project(project).toArray(function(err, res) {
-				if (err) throw err;
+				if (err) {throw err};
 				if(res.length == 0){
 					//nije nadjen takav skraceni url
 					var errorMsg = {"error":"No such shortened url."};
